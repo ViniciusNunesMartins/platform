@@ -1,0 +1,30 @@
+version: '3'
+
+
+include:
+  - platform-compose.yaml
+
+# services:
+#   api:
+#     container_name: api
+#     build:
+#       context: project/api
+#       dockerfile: Dockerfile
+#     ports:
+#       - 8000:8000
+#     env_file:
+#       - project/api/.env
+#     depends_on:
+#       - database
+#       - cache
+#       - messaging
+  
+#   web:
+#     container_name: web
+#     build:
+#       context: project/web
+#       dockerfile: Dockerfile
+#     ports:
+#       - 3000:3000
+#     depends_on:
+#       - api
