@@ -1,0 +1,17 @@
+version: '3'
+
+
+services:
+  adminer:
+    container_name: adminer
+    build:
+      context: adminer
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    profiles:
+      - manager
+      - debug
+    networks:
+      - platform

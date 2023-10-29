@@ -1,0 +1,15 @@
+version: '3'
+
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    build: 
+      context: rabbitmq
+      dockerfile: Dockerfile
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      - "25672:25672"
+    networks:
+      - platform
